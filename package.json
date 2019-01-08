@@ -4,7 +4,8 @@
   "description": "Automated browser testing example using Jest and Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "test:voyeur": "HEADLESS=false jest --runInBand"
   },
   "jest": {
     "preset": "jest-puppeteer"
