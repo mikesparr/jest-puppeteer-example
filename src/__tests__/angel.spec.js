@@ -58,7 +58,7 @@ describe('AngelList', () => {
                 ['user[password]']: pass
             });
             await page.click(submitSelector);
-            await page.waitFor(500);
+            await page.waitForNavigation();
             await expect(page).toMatch(`Profile`);
             await util.timeout(1000); // just so you can see it if in voyeur mode
         });
@@ -66,10 +66,13 @@ describe('AngelList', () => {
         it('should delete fake account', async () => {
             await page.goto('https://angel.co/settings');
             await expect(page).toClick('a', { text: 'Delete account' });
+            await page.waitForNavigation();
+            // give a reason
             await expect(page).toSelect(reasonSelector, 'other');
             await expect(page).toFill(feedbackSelector, 'I was just testing this out but have another account. Sorry for trouble.');
             await expect(page).toClick('a', { text: 'Continue' });
-            await page.waitFor(1000);
+            await page.waitForNavigation();
+            // confirm credentials
             await expect(page).toMatch('Last step before you delete your account..');
             await expect(page).toFill(passwordSelector, pass);
             await page.click(submitSelector);

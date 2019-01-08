@@ -42,15 +42,16 @@ npm install --save-dev jest-puppeteer puppeteer jest
  2. Add `jest-puppeteer.config.js` configuration file to root dir (same as package.json)
 ```javascript
 module.exports = {
-  launch: {
-    dumpio: false,
-    headless: process.env.HEADLESS !== 'false',   // export HEADLESS=false to launch Chromium
-    devtools: true,                               // optionally display devtools in non-headless mode
-    defaultViewport: {                            // override default 800x600 pixel browser setting
-      width: 1024,
-      height: 768
+    launch: {
+        dumpio: false,
+        headless: process.env.HEADLESS !== 'false',   // export HEADLESS=false to launch Chromium
+        devtools: true,                               // optionally display devtools in non-headless mode
+        slowMo: 100, 				                          // optionally slow down typing
+        defaultViewport: {                            // override default 800x600 pixel browser setting
+            width: 1024,
+            height: 768
+        }
     }
-  }
 };
 ```
 
