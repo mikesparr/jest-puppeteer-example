@@ -6,6 +6,14 @@
   "scripts": {
     "test": "jest --runInBand"
   },
+  "jest": {
+    "preset": "jest-puppeteer"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.7.0",
+    "puppeteer": "^1.11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikesparr/jest-puppeteer-example.git"
