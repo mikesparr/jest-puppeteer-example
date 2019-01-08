@@ -1,0 +1,25 @@
+{
+  "name": "jest-puppeteer-example",
+  "version": "1.0.0",
+  "description": "Automated browser testing example using Jest and Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikesparr/jest-puppeteer-example.git"
+  },
+  "keywords": [
+    "testing",
+    "puppeteer",
+    "jest",
+    "chromium"
+  ],
+  "author": "Mike Sparr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikesparr/jest-puppeteer-example/issues"
+  },
+  "homepage": "https://github.com/mikesparr/jest-puppeteer-example#readme"
+}
